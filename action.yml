@@ -3,66 +3,66 @@ description: "Aron-toso ML Processing Data"
 author: "aronchick"
 inputs:
   METASTORE_CREDENTIALS:
-    description: "Some text"
+    description: "Encoded URL, endpoint and credentials for logging into to a Gremlin server."
     required: true
   WORKFLOW_NODE_ID:
-    description: "Some text"
+    description: "Workflow node for lookup."
     required: true
   STEP_NAME:
-    description: "Some text"
+    description: "String that describes the name of this workflow step."
     required: true
   SCHEMAS_DIRECTORY:
-    description: "Some text"
+    description: "Directory on disk that stores all schemas used to validate."
     required: true
     default: ".parameters/schemas"
   SCHEMAS_GIT_URL:
-    description: "Some text"
+    description: "Git URL that contains the schemas for validation. Will be 'shallow' pulled during run."
     required: false
   PREVIOUS_STEP_NAME:
-    description: "Some text"
+    description: "String that points to the previous step_name."
     required: false
   NEXT_STEP_NAME:
-    description: "Some text"
+    description: "String that points to the next step_name."
     required: false
   INPUT_PARAMETERS_RAW:
-    description: "Some text"
+    description: "String containing input parameters in yaml or json form. Will be validated against schema."
     required: false
   INPUT_PARAMETERS_BASE64:
-    description: "Some text"
+    description: "String containing input parameters in yaml or json form encoded into URL Safe Base64. Will be validated against schema."
     required: false
   INPUT_PARAMETERS_NODE_ID:
-    description: "Some text"
+    description: "String containing the Node ID on the Gremlin server of the input parameters to this step in the process. Will be validated against schema."
     required: false
   INPUT_PARAMETERS_FILE_PATH:
-    description: "Some text"
+    description: "String containing the file path in the container of the input parameters of this step. Will be validated against schema."
     required: false
   EXECUTION_PARAMETERS_RAW:
-    description: "Some text"
+    description: "String containing execution parameters in yaml or json form. Will be validated against schema."
     required: false
   EXECUTION_PARAMETERS_BASE64:
-    description: "Some text"
+    description: "String containing input parameters in yaml or json form encoded into URL Safe Base64. Will be validated against schema."
     required: false
   EXECUTION_PARAMETERS_NODE_ID:
-    description: "Some text"
+    description:  "String containing the Node ID on the Gremlin server of the execution parameters to this step in the process. Will be validated against schema."
     required: false
   EXECUTION_PARAMETERS_FILE_PATH:
-    description: "Some text"
+    description: "String containing the file path in the container of the input parameters of this step. Will be validated against schema."
     required: false
 output:
     output_base64_encoded:
-      description: "Some text"
+      description: "Output of this step encoded into URL Safe Base64 text."
     input_node_id:
-      description: "Some text"
+      description: "Node ID on the Gremlin server of the input."
     execution_node_id:
-      description: "Some text"
+      description: "Node ID on the Gremlin server of the execution."
     output_node_id:
-      description: "Some text"
+      description: "Node ID on the Gremlin server of the output."
     log_node_id:
-      description: "Some text"
+      description: "Node ID on the Gremlin server of the logs."
 
 branding:
-  icon: "chevron-up"
-  color: "blue"
+  icon: "life-buoy"
+  color: "purple"
 runs: 
   using: 'docker'
   image: 'docker://mlspec/mlspeclib-action-samples-process-data:latest'
