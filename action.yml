@@ -1,5 +1,5 @@
-name: "Aron-toso - Process Data"
-description: "Aron-toso ML Processing Data"
+name: "Aron-toso - Serve on AML Endpoint"
+description: "Aron-toso Serve on AML Endpoint"
 author: "aronchick"
 inputs:
   METASTORE_CREDENTIALS:
